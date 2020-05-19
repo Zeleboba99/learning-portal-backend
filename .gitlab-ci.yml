@@ -1,0 +1,35 @@
+image: java:8
+image: maven:latest
+
+stages:
+    # - build
+    - test
+    - deploy
+
+before_script:
+  - chmod +x mvnw
+
+# build:
+#   stage: build
+#   script: ./mvnw compile
+#   only: 
+#       - master
+
+test:
+    stage: test
+    script: mvn test
+    #./mvnw test
+    only: 
+      - master
+      
+        
+deploy:
+  stage: deploy
+  image: ruby:latest
+  script:
+  - apt-get update -qy
+  - apt-get install -y ruby-dev
+  - gem install dpl
+  - dpl --provider=heroku --app=$HEROKU_APP_NAME --api-key=$HEROKU_API_KEY
+  only:
+  - master

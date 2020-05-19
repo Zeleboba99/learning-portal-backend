@@ -1,0 +1,6 @@
+spring:
+  datasource:
+    url: postgres://modxlmakobqewp:17525387e152677547d37678eb519484d7f0cf7c928d13f07f839815182d2cd4@ec2-52-203-98-126.compute-1.amazonaws.com:5432/db17p786vtsqo5
+    username: modxlmakobqewp
+    password: 17525387e152677547d37678eb519484d7f0cf7c928d13f07f839815182d2cd4
+#    data: classpath:/populate_db.sql
