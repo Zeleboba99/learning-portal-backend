@@ -12,22 +12,22 @@ spring:
       client:
         registration:
           google:
-            clientId: 843244670566-bfmb08mv9mpahgkf6bk6efgcr9kh1ien.apps.googleusercontent.com
-            clientSecret: lnv7S5Z1D1hIo8tIj92f98Zo
+            clientId: 418913083740-v55pp2u7ndnlspld06sr2d13upjbg96o.apps.googleusercontent.com
+            clientSecret: KatuzEBfjCBThfxg_EA8C2JO
             redirectUri: "{baseUrl}/oauth2/callback/{registrationId}"
             scope:
               - email
               - profile
           github:
-            clientId: Iv1.6f7275464364c816
-            clientSecret: 91fd5608f794e6ab74b8625adb2adf616b43c0f1
+            clientId: Iv1.ab8a54a8d121170c
+            clientSecret: 5644a4477721fd16fcffad55a0f8bf1527eaa6cf
             redirectUri: "{baseUrl}/oauth2/callback/{registrationId}"
             scope:
               - user:email
               - read:user
           facebook:
-            clientId: 540016256618756
-            clientSecret: 5e2ec99f831424438ab8d46d1229e84a
+            clientId: 691456481648182
+            clientSecret: 7d2632c8fc3baaf0b9044b5b8bfee9de
             redirectUri: "{baseUrl}/oauth2/callback/{registrationId}" # Note that facebook now mandates the use of https redirect URIs, so make sure your app supports https in production
             scope:
               - email
@@ -46,6 +46,6 @@ app:
     # we'll be generating an auth token for the user and sending the token to the
     # redirectUri mentioned by the frontend client in the /oauth2/authorize request.
     authorizedRedirectUris:
-      - https://portal-angular.herokuapp.com/oauth2/redirect
+      - https://murmuring-springs-23422.herokuapp.com/oauth2/redirect
 server:
   port: 8080
